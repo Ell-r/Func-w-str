@@ -63,6 +63,24 @@ char* NumberToString(int number) {
 	return strNew;
 }
 
+char* Uppercase(char* str1) {
+	int size = strlen(str1);
+	char* strNew = new char[size + 1];
+	strcpy(strNew, "");
+
+	for (int i = 0; i < size; i++) {
+		if (str1[i] >= 'a' && str1[i] <= 'z') {
+			strNew[i] = str1[i] - 32;
+		}
+		else if (str1[i] < 'a' || str1[i] > 'z') {
+			strNew[i] = str1[i];
+		}
+	}
+
+	strNew[size] = '\0';
+	return strNew;
+
+}
 
 void deleteArray(char* str) {
 	delete[] str;
@@ -86,6 +104,12 @@ int main()
 	cout << "¬вед≥ть число: ";
 	cin >> number;
 	char* strNew = NumberToString(number);
+	cout << strNew;
+	deleteArray(strNew);*/
+
+	/*char str1[100];
+	fillStr(str1);
+	char* strNew = Uppercase(str1);;
 	cout << strNew;
 	deleteArray(strNew);*/
 
