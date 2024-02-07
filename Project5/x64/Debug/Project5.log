@@ -1,0 +1,7 @@
+﻿  FileName.cpp
+C:\Users\ellhe\source\repos\Project5\Project5\FileName.cpp(40,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ellhe\source\repos\Project5\Project5\FileName.cpp(67,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ellhe\source\repos\Project5\Project5\FileName.cpp(86,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ellhe\source\repos\Project5\Project5\FileName.cpp(105,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ellhe\source\repos\Project5\Project5\FileName.cpp(36): warning C4715: mystrcmp: значение возвращается не при всех путях выполнения
+  Project5.vcxproj -> C:\Users\ellhe\source\repos\Project5\x64\Debug\Project5.exe
