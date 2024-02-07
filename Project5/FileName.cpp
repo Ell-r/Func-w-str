@@ -3,7 +3,13 @@
 #include <string.h>
 using namespace std;
 
+void fillStr(char str[]) {
+	cout << "¬вед≥ть р€док: ";
+	cin >> str;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "rus");
+
 }
