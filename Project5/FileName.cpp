@@ -35,6 +35,17 @@ int mystrcmp(const char* str1, const char* str2) {
 
 }
 
+int StringToNumber(char* str) {
+	int result = str[0] - '0';
+	int size = strlen(str);
+	for (int i = 1; i < size; i++) {
+		result *= 10;
+		result += str[i] - '0';
+	}
+
+	return result;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -42,6 +53,11 @@ int main()
 	fillStr(str1);
 	fillStr(str2);
 	int result = mystrcmp(str1, str2);
+	cout << result;*/
+
+	/*char str[100];
+	fillStr(str);
+	int result = StringToNumber(str);
 	cout << result;*/
 
 }
