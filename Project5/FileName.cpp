@@ -46,6 +46,28 @@ int StringToNumber(char* str) {
 	return result;
 }
 
+char* NumberToString(int number) {
+	int size = 0, temp = number;
+	while (temp != 0) {
+		temp = temp / 10;
+		size++;
+	}
+	char* strNew = new char[size + 1];
+	strcpy(strNew, "");
+
+	for (int i = size - 1; i >= 0; i--) {
+		strNew[i] = number % 10 + '0';
+		number /= 10;
+	}
+	strNew[size] = '\0';
+	return strNew;
+}
+
+
+void deleteArray(char* str) {
+	delete[] str;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -59,5 +81,12 @@ int main()
 	fillStr(str);
 	int result = StringToNumber(str);
 	cout << result;*/
+
+	/*int number;
+	cout << "¬вед≥ть число: ";
+	cin >> number;
+	char* strNew = NumberToString(number);
+	cout << strNew;
+	deleteArray(strNew);*/
 
 }
