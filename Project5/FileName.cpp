@@ -82,6 +82,25 @@ char* Uppercase(char* str1) {
 
 }
 
+char* Lowercase(char* str1) {
+	int size = strlen(str1);
+	char* strNew = new char[size + 1];
+	strcpy(strNew, "");
+
+	for (int i = 0; i < size; i++) {
+		if (str1[i] >= 'A' && str1[i] <= 'Z') {
+			strNew[i] = str1[i] + 32;
+		}
+		else if (str1[i] < 'A' || str1[i] > 'Z') {
+			strNew[i] = str1[i];
+		}
+	}
+
+	strNew[size] = '\0';
+	return strNew;
+
+}
+
 void deleteArray(char* str) {
 	delete[] str;
 }
@@ -110,6 +129,12 @@ int main()
 	/*char str1[100];
 	fillStr(str1);
 	char* strNew = Uppercase(str1);;
+	cout << strNew;
+	deleteArray(strNew);*/
+
+	/*char str1[100];
+	fillStr(str1);
+	char* strNew = Lowercase(str1);;
 	cout << strNew;
 	deleteArray(strNew);*/
 
