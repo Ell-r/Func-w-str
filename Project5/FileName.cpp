@@ -101,6 +101,24 @@ char* Lowercase(char* str1) {
 
 }
 
+char* mystrrev(char* str) {
+	int size = strlen(str);
+	char* strNew = new char[size + 1];
+	strcpy(strNew, "");
+
+	for (int i = 0; i < size; i++) {
+		strNew[i] = str[i];
+	}
+
+	for (int i = 0; i < size / 2; i++) {
+		swap(strNew[i], strNew[size - i - 1]);
+	}
+
+	strNew[size] = '\0';
+	return strNew;
+}
+
+
 void deleteArray(char* str) {
 	delete[] str;
 }
@@ -135,6 +153,12 @@ int main()
 	/*char str1[100];
 	fillStr(str1);
 	char* strNew = Lowercase(str1);;
+	cout << strNew;
+	deleteArray(strNew);*/
+
+	/*char str[100];
+	fillStr(str);
+	char* strNew = mystrrev(str);
 	cout << strNew;
 	deleteArray(strNew);*/
 
